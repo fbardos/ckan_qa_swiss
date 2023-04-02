@@ -6,6 +6,9 @@ logs/
 unittests.cfg
 webserver_config.py
 
+# GX
+great_expectations/
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
