@@ -5,6 +5,7 @@ airflow.db
 logs/
 unittests.cfg
 webserver_config.py
+airflow/airflow-webserver.pid
 
 # GX
 great_expectations/
