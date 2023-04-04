@@ -1,4 +1,8 @@
 ### Project specific ###
+
+# Docker deployment specific
+docker/
+
 # Airflow
 airflow.cfg
 airflow.db
