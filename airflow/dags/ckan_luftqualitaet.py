@@ -4,7 +4,7 @@ from airflow import DAG
 from airflow.operators.dummy import DummyOperator
 from ckanqa.operator.ckan import (CkanDeleteContextOperator,
                                   CkanDeleteOperator, CkanExtractOperator,
-                                  CkanParquetOperator)
+                                  CkanParquetOperator, PublishDataDocsOperator)
 from ckanqa.operator.context import CkanContextSetter
 from ckanqa.factory import ValidationTaskFactory
 from ckanqa.config import ValidationConfig
@@ -361,8 +361,14 @@ with DAG(
         ckan_name=CKAN_NAME,
     )
 
+    t6 = PublishDataDocsOperator(
+        task_id='publish_docs',
+        ckan_name=CKAN_NAME,
+    )
+
     _ = factory.connect_tasks(t2, t3)
     t0.set_downstream(t1)
     t1.set_downstream(t2)
     t3.set_downstream(t4)
     t4.set_downstream(t5)
+    t5.set_downstream(t6)
