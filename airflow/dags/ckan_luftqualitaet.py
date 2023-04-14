@@ -12,7 +12,7 @@ from great_expectations.core.expectation_configuration import ExpectationConfigu
 
 with DAG(
     dag_id='ckan_luftqualitaet',
-    schedule_interval='0 3 * * *',
+    schedule_interval='5 3 * * *',
     start_date=dt.datetime(2022, 9, 1),
     catchup=False,
     tags=[

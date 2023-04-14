@@ -36,7 +36,7 @@ from ckanqa.operator.context import CkanContextSetter
 
 with DAG(
     dag_id='ckan_traffic',
-    schedule_interval='0 3 * * *',
+    schedule_interval='10 3 * * *',
     start_date=dt.datetime(2023, 1, 20),
     catchup=False,
     tags=[
