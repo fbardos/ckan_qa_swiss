@@ -163,6 +163,5 @@ with DAG(
     _ = factory.connect_tasks(t2, t3)
     t0.set_downstream(t1)
     t1.set_downstream(t2)
-    t3.set_downstream(t4)
+    t3.set_downstream([t4, t6])
     t4.set_downstream(t5)
-    t5.set_downstream(t6)
