@@ -210,6 +210,7 @@ with DAG(
                 expectation_type='expect_column_values_to_not_be_null',
                 kwargs={
                     'column': 'wind_gust_max_10min',
+                    'mostly': 0.99,
                 }
             ), ()
         ),
@@ -471,6 +472,7 @@ with DAG(
                 expectation_type='expect_column_values_to_not_be_null',
                 kwargs={
                     'column': 'dew_point',
+                    'mostly': 0.99
                 }
             ), ()
         ),
