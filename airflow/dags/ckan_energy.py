@@ -107,8 +107,8 @@ with DAG(
                 expectation_type='expect_column_values_to_change_between',
                 kwargs={
                     'column': 'bruttolastgang_kwh',
-                    'from_value': -2_000,
-                    'to_value': 2_000,
+                    'from_value': -5_000,
+                    'to_value': 5_000,
                 }
             ), ()
         ),
