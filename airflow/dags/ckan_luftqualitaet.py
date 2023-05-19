@@ -247,7 +247,7 @@ with DAG(
                 kwargs={
                     'column': 'Wert',
                     'min_value': 0,
-                    'max_value': 120,
+                    'max_value': 150,
                 }
             ), ('O3_max_h1', )
         ),
